@@ -39,4 +39,4 @@ jobs:
           push: true
           file: ./Dockerfile
           tags: |
-            ghcr.io/institute-fvv/limesurvey/limesurvey:latest
+            ghcr.io/institute-fvv/fvv/limesurvey:latest
