@@ -13,7 +13,7 @@ RUN apt-get install net-tools -y
 # based on https://github.com/adamzammit/limesurvey-docker/blob/master/Dockerfile
 # install prerequisits
 RUN apt-get install -y libpq-dev unzip libc-client-dev libfreetype6-dev libmcrypt-dev libpng-dev libjpeg-dev libldap2-dev zlib1g-dev libkrb5-dev libtidy-dev libzip-dev libsodium-dev && rm -rf /var/lib/apt/lists/* \
-	&& docker-php-ext-configure gd --with-freetype=/usr/include/  --with-png=/usr --with-jpeg=/usr \
+	&& docker-php-ext-configure gd --with-freetype=/usr/include/  --with-jpeg=/usr \
 	&& docker-php-ext-install gd mysqli pdo pdo_mysql pdo_pgsql opcache zip iconv tidy \
     && docker-php-ext-configure ldap --with-libdir=lib/$(gcc -dumpmachine)/ \
     && docker-php-ext-install ldap \
