@@ -20,7 +20,7 @@ RUN apt-get install -y libpq-dev unzip libc-client-dev libfreetype6-dev libmcryp
     && docker-php-ext-configure imap --with-imap-ssl --with-kerberos \
     && docker-php-ext-install imap \
     && docker-php-ext-install sodium \
-    && pecl install mcrypt-1.0.3 \
+    && pecl install mcrypt \
     && docker-php-ext-enable mcrypt \
     && docker-php-ext-install exif
 
@@ -37,7 +37,7 @@ RUN { \
 
 # install limesurvey
 RUN set -x; \
-    curl -SL https://download.limesurvey.org/lts-releases/limesurvey3.25.7+210113.zip -o /tmp/lime.zip; \
+    curl -SL https://download.limesurvey.org/lts-releases/limesurvey3.25.8+210118.zip -o /tmp/lime.zip; \
     unzip /tmp/lime.zip -d /tmp; \
     mv /tmp/lime*/* /var/www/html/; \
     mv /tmp/lime*/.[a-zA-Z]* /var/www/html/; \
