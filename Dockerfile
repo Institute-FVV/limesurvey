@@ -37,7 +37,7 @@ RUN { \
 
 # install limesurvey
 RUN set -x; \
-    curl -SL https://download.limesurvey.org/lts-releases/limesurvey3.25.10+210128.zip -o /tmp/lime.zip; \
+    curl -SL https://download.limesurvey.org/lts-releases/limesurvey3.26.1+210427.zip -o /tmp/lime.zip; \
     unzip /tmp/lime.zip -d /tmp; \
     mv /tmp/lime*/* /var/www/html/; \
     mv /tmp/lime*/.[a-zA-Z]* /var/www/html/; \
