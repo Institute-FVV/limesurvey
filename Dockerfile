@@ -20,7 +20,7 @@ RUN apt-get install -y libpq-dev unzip libc-client-dev libfreetype6-dev libmcryp
     && docker-php-ext-configure imap --with-imap-ssl --with-kerberos \
     && docker-php-ext-install imap \
     && docker-php-ext-install sodium \
-    && pecl install mcrypt \
+    && pecl install mcrypt-1.0.4 \
     && docker-php-ext-enable mcrypt \
     && docker-php-ext-install exif
 
